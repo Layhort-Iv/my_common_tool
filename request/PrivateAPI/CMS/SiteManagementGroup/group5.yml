@@ -1,0 +1,8 @@
+---
+groupId:
+isAdmin: false
+roles:
+- developer
+- tester
+- releaseManager
+- securityManager

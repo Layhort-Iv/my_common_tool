@@ -1,0 +1,44 @@
+---
+displayName: Default Message Test
+crudForm:
+  requiredErrorMessage: Required Update
+  duplicateErrorMessage: The entered value cannot be registered
+  recaptchaErrorMessage: Please check
+  otherErrorsMessage: Error
+  reenterErrorMessage: Confirmation does not match
+  reenterLabel: Input Confirmation
+  unselectedLabel: "----- Please Select -----"
+  requiredIndicator: "*"
+  prevButtonLabel: Previous
+  nextButtonLabel: Next
+  submitButtonLabel: Submit
+  file:
+    fileButtonLabel: Upload File
+    fileDropAreaLabel: Please drop files here
+    displayMaxFileNumberHelpText: true
+    maxFileNumberHelpText: 'File limit: ${fileLimitedNumber} files'
+    displayMaxFileSizeHelpText: true
+    maxFileSizeHelpText: 'File size limit: ${fileLimitedSize}'
+    displayAllowedExtensionsHelpText: true
+    allowedExtensionsHelpText: 'Allowed extension: ${fileExtension}'
+    maxFileNumberErrorMessage: File number error (Maximium ${fileLimitedNumber} files)
+    extensionErrorMessage: Extension error
+    maxFileSizeErrorMessage: File size error (Maximum ${fileLimitedSize})
+    fileScanErrorMessage: File scan error
+    uploadErrorMessage: Upload error
+    retryLabel: Retry
+    fileFormatErrorMessage: File format and extension do not match
+    fileNameErrorMessage: File name error (up to 256 characters including extension)
+    fileOtherErrorMessage: An error has occurred
+authenticationForm:
+  idLabel: ID
+  passwordLabel: Password
+  loginButtonLabel: Login
+  authenticationErrorMessage: Invalid credentials or user locked out
+  loginLockErrorMessage: Invalid credentials or user locked out
+  passwordReenterLabel: Input confirmation
+  idRequiredErrorMessage: Required
+  passwordFormatErrorMessage: The entered value cannot be used in a password
+  passwordReenterErrorMessage: Confirmation does not match
+  requestButtonLabel: Submit
+  registrationButtonLabel: Registration

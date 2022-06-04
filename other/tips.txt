@@ -1,0 +1,3 @@
+Create and write file
+    file = open("./csv_report/myfile.txt", "w+")
+    file.write(str(res_page.text))

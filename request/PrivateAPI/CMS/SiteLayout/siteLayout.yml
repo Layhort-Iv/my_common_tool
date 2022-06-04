@@ -1,0 +1,23 @@
+---
+name: SiteLayout
+displayName: Site Layout
+view:
+  design: source
+  template:
+    content: |-
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <sp:metadata></sp:metadata>
+      </head>
+      <body>
+          <sp:content></sp:content>
+      </body>
+      </html>
+    metadata: |-
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  style:
+    content: ''
+  script:
+    content: ''

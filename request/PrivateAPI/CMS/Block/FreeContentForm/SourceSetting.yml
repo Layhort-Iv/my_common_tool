@@ -1,0 +1,7 @@
+---
+creationType: simple
+name: SourceSetting
+displayName: Free Content - Source Setting
+description: Free Content - Source Setting
+view:
+  design: source

@@ -1,0 +1,21 @@
+---
+name: RecordSearch
+displayName: Record Search
+dbId:
+recordListId:
+pageId:
+fields:
+- name: f01
+  dbFieldId: '1'
+  operator: contains
+- name: f04
+  dbFieldId: '4'
+  operator: anycontains
+- name: f05
+  dbFieldId: '5'
+  operator: anycontains
+- name: f010
+  dbFieldId: '10'
+  operator: ge_and_le
+view:
+  design: source

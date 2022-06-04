@@ -1,0 +1,11 @@
+---
+view:
+  design: source
+  layoutId:
+  template:
+    content:
+    metadata: <title th:text="${page.title}"></title>
+  style:
+    content: ''
+  script:
+    content: ''

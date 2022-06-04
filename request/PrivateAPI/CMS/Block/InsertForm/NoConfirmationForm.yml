@@ -1,0 +1,984 @@
+---
+name: Insert_Form_Source_Setting
+displayName: Insert_Form_Source_Setting
+description: Insert_Form_Source_Setting
+defaultMessageId: "-2"
+preference:
+  requiredIndicator:
+  reenterLabel:
+  unselectedLabel:
+  requiredErrorMessage:
+  duplicateErrorMessage:
+  reenterErrorMessage:
+  passwordFormatErrorMessage:
+  recaptchaErrorMessage:
+  otherErrorsMessage:
+  prevButtonLabel:
+  nextButtonLabel:
+  submitButtonLabel:
+  fileFormPreference:
+fields:
+- name: f01
+  dbFieldId: '1'
+  operation: input
+  restriction:
+    required: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: text
+- name: f02
+  dbFieldId: '2'
+  operation: input
+  restriction:
+    required: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: textarea
+- name: f03
+  dbFieldId: '3'
+  operation: input
+  restriction:
+    required: true
+    collation: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    reenterLabel:
+    attributeName: email
+- name: f04
+  dbFieldId: '4'
+  operation: input
+  restriction:
+    required: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    unselectedLabel:
+    attributeName: select
+- name: f05
+  dbFieldId: '5'
+  operation: input
+  restriction:
+    required: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    attributeName: multiselect
+- name: f06
+  dbFieldId: '6'
+  operation: input
+  restriction:
+    required: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: integer
+- name: f07
+  dbFieldId: '7'
+  operation: input
+  restriction:
+    required: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: double
+- name: f08
+  dbFieldId: '8'
+  operation: input
+  restriction:
+    required: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: phone
+- name: f09
+  dbFieldId: '9'
+  operation: input
+  restriction:
+    required: false
+    min:
+    max:
+    timeZone: Asia/Tokyo
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    datePlaceholder:
+    timePlaceholder:
+    yearPlaceholder:
+    monthPlaceholder:
+    dayPlaceholder:
+    hourPlaceholder:
+    minutePlaceholder:
+    secondPlaceholder:
+    attributeName: datetime
+- name: f010
+  dbFieldId: '10'
+  operation: input
+  restriction:
+    required: false
+    min:
+    max:
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    yearPlaceholder:
+    monthPlaceholder:
+    dayPlaceholder:
+    attributeName: date
+- name: f011
+  dbFieldId: '11'
+  operation: input
+  restriction:
+    required: false
+    min:
+    max:
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    monthPlaceholder:
+    dayPlaceholder:
+    attributeName: monthday
+- name: f012
+  dbFieldId: '12'
+  operation: input
+  restriction:
+    required: false
+    min:
+    max:
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    hourPlaceholder:
+    minutePlaceholder:
+    secondPlaceholder:
+    attributeName: time
+- name: f013
+  dbFieldId: '13'
+  operation: input
+  restriction:
+    required: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: file
+- name: f014
+  dbFieldId: '14'
+  operation: input
+  restriction:
+    required: false
+    collation: false
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    reenterLabel:
+    attributeName: password
+steps:
+- name: s01
+  displayName: Step1
+  type: input
+- name: s02
+  displayName: Step2
+  references:
+  - s01
+  type: confirmation
+onCompletion:
+  handlers: []
+  behavior: display
+authenticationId:
+restriction:
+  period:
+    startAt:
+    endAt:
+    timeZone: Asia/Tokyo
+  registerLimit:
+    settingValue:
+view:
+  template:
+    steps:
+    - stepName: s01
+      content: "<div class=\"sp-form-container\"> \n  <div class=\"sp-form-item sp-form-html\"
+        th:inline=\"none\"><p><span style=\"font-size: 18pt;\">Insert_Form_Source_Setting</span></p></div>
+        \n  <!--/* text(text) */--> \n  <sp:input-field name=\"f01\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f01'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f01'].required}\"
+        th:text=\"${fields['f01'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\">\n      <input type=\"text\" class=\"sp-form-control\"
+        th:name=\"${fields['f01'].name}\" th:value=\"${inputs['f01']}\">\n      <span
+        class=\"sp-form-noted\" th:if=\"${fields['f01'].help != null}\" th:text=\"${fields['f01'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f01'] !=
+        null}\" th:text=\"${errors['f01'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <!--/* textarea(textarea) */--> \n  <sp:input-field name=\"f02\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f02'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f02'].required}\"
+        th:text=\"${fields['f02'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\">\n      <textarea class=\"sp-form-control\" th:name=\"${fields['f02'].name}\"
+        th:text=\"${inputs['f02']}\"></textarea>\n      <span class=\"sp-form-noted\"
+        th:if=\"${fields['f02'].help != null}\" th:text=\"${fields['f02'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f02'] !=
+        null}\" th:text=\"${errors['f02'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <!--/* email(email) */--> \n  <sp:input-field name=\"f03\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f03'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f03'].required}\"
+        th:text=\"${fields['f03'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\">\n      <input type=\"email\" class=\"sp-form-control\"
+        th:name=\"${fields['f03'].name}\" th:value=\"${inputs['f03']}\"> \n      <div
+        th:if=\"${fields['f03'].collation}\">\n        <span class=\"sp-form-email-reenter\"
+        th:text=\"${fields['f03'].reenterLabel}\">Re-enter to confirm</span>\n        <input
+        type=\"email\" class=\"sp-form-control\" th:name=\"${fields['f03:reenter'].name}\"
+        th:value=\"${inputs['f03:reenter']}\">\n      </div> \n      <span class=\"sp-form-noted\"
+        th:if=\"${fields['f03'].help != null}\" th:text=\"${fields['f03'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f03'] !=
+        null}\" th:text=\"${errors['f03'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <!--/* select(select) */--> \n  <sp:input-field name=\"f04\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f04'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f04'].required}\"
+        th:text=\"${fields['f04'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\"> \n      <div class=\"sp-form-selection-vertical\">\n
+        \       <label class=\"sp-form-selection\" th:each=\"option : ${fields['f04'].options}\">\n
+        \         <input type=\"radio\" th:name=\"${fields['f04'].name}\" th:value=\"${option.id}\"
+        th:checked=\"${inputs['f04'] == #strings.toString(option.id)}\">\n          <span
+        class=\"sp-form-selection-label\" th:text=\"${option.label}\">Item</span>\n
+        \       </label>\n      </div> \n      <span class=\"sp-form-noted\" th:if=\"${fields['f04'].help
+        != null}\" th:text=\"${fields['f04'].help}\">Help text</span>\n      <span
+        class=\"sp-form-error\" th:if=\"${errors['f04'] != null}\" th:text=\"${errors['f04'].message}\">Error
+        message</span>\n    </div> \n  </div> \n  <!--/* multiselect(multiselect)
+        */--> \n  <sp:input-field name=\"f05\"></sp:input-field> \n  <div class=\"sp-form-item
+        sp-form-field\"> \n    <div class=\"sp-form-label\"> \n      <th:block th:text=\"${fields['f05'].label}\">\n
+        \       Label\n      </th:block> \n      <span class=\"sp-form-required\"
+        th:if=\"${fields['f05'].required}\" th:text=\"${fields['f05'].requiredIndicator}\">*</span>\n
+        \   </div> \n    <div class=\"sp-form-data\"> \n      <div class=\"sp-form-selection-vertical\">\n
+        \       <label class=\"sp-form-selection\" th:each=\"option : ${fields['f05'].options}\">\n
+        \         <input type=\"checkbox\" th:name=\"${fields['f05'].name}\" th:value=\"${option.id}\"
+        th:checked=\"${inputs['f05'] != null ? #lists.contains(inputs['f05'], #strings.toString(option.id))
+        : false}\">\n          <span class=\"sp-form-selection-label\" th:text=\"${option.label}\">Item</span>\n
+        \       </label>\n      </div> \n      <span class=\"sp-form-noted\" th:if=\"${fields['f05'].help
+        != null}\" th:text=\"${fields['f05'].help}\">Help text</span>\n      <span
+        class=\"sp-form-error\" th:if=\"${errors['f05'] != null}\" th:text=\"${errors['f05'].message}\">Error
+        message</span>\n    </div> \n  </div> \n  <!--/* integer(integer) */--> \n
+        \ <sp:input-field name=\"f06\"></sp:input-field> \n  <div class=\"sp-form-item
+        sp-form-field\"> \n    <div class=\"sp-form-label\"> \n      <th:block th:text=\"${fields['f06'].label}\">\n
+        \       Label\n      </th:block> \n      <span class=\"sp-form-required\"
+        th:if=\"${fields['f06'].required}\" th:text=\"${fields['f06'].requiredIndicator}\">*</span>\n
+        \   </div> \n    <div class=\"sp-form-data\">\n      <input type=\"number\"
+        class=\"sp-form-control sp-form-number\" th:name=\"${fields['f06'].name}\"
+        th:value=\"${inputs['f06']}\">\n      <span class=\"sp-form-noted\" th:if=\"${fields['f06'].help
+        != null}\" th:text=\"${fields['f06'].help}\">Help text</span>\n      <span
+        class=\"sp-form-error\" th:if=\"${errors['f06'] != null}\" th:text=\"${errors['f06'].message}\">Error
+        message</span>\n    </div> \n  </div> \n  <!--/* double(double) */--> \n  <sp:input-field
+        name=\"f07\"></sp:input-field> \n  <div class=\"sp-form-item sp-form-field\">
+        \n    <div class=\"sp-form-label\"> \n      <th:block th:text=\"${fields['f07'].label}\">\n
+        \       Label\n      </th:block> \n      <span class=\"sp-form-required\"
+        th:if=\"${fields['f07'].required}\" th:text=\"${fields['f07'].requiredIndicator}\">*</span>\n
+        \   </div> \n    <div class=\"sp-form-data\">\n      <input type=\"number\"
+        class=\"sp-form-control sp-form-number\" th:name=\"${fields['f07'].name}\"
+        step=\"any\" th:value=\"${inputs['f07']}\">\n      <span class=\"sp-form-noted\"
+        th:if=\"${fields['f07'].help != null}\" th:text=\"${fields['f07'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f07'] !=
+        null}\" th:text=\"${errors['f07'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <!--/* phone(phone) */--> \n  <sp:input-field name=\"f08\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f08'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f08'].required}\"
+        th:text=\"${fields['f08'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\"> \n      <div class=\"sp-form-phone\"> \n        <div
+        class=\"sp-form-dropdown\" th:if=\"${fields['f08'].countryCode == null}\">\n
+        \         <select class=\"sp-form-control\" th:name=\"${fields['f08:countryCode'].name}\">\n
+        \           <option value=\"\" th:text=\"${fields['f08'].unselectedCodeLabel}\"
+        th:selected=\"${inputs['f08:countryCode'] == null}\">Select option</option>\n
+        \           <option th:each=\"countryCode : ${fields['f08'].countryCodes}\"
+        th:value=\"${countryCode.country.alpha2Code}\" th:text=\"|${countryCode.country.alpha2Code}(+${countryCode.code})|\"
+        th:selected=\"${inputs['f08:countryCode'] == countryCode.country.alpha2Code}\">Item</option>\n
+        \         </select>\n          <span class=\"sp-form-dropdown-icon\"></span>\n
+        \       </div> \n        <input type=\"tel\" class=\"sp-form-control\" th:name=\"${fields['f08'].name}\"
+        th:value=\"${inputs['f08']}\">\n      </div> \n      <span class=\"sp-form-noted\"
+        th:if=\"${fields['f08'].help != null}\" th:text=\"${fields['f08'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f08'] !=
+        null}\" th:text=\"${errors['f08'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <!--/* datetime(datetime) */--> \n  <sp:input-field name=\"f09\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f09'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f09'].required}\"
+        th:text=\"${fields['f09'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\"> \n      <div class=\"sp-form-datetimes\"> \n        <div
+        class=\"sp-form-date\">\n          <input type=\"number\" class=\"sp-form-control\"
+        th:name=\"${fields['f09:year'].name}\" th:value=\"${inputs['f09:year']}\">\n
+        \         <span class=\"sp-form-date-separator\">/</span>\n          <input
+        type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f09:month'].name}\"
+        th:value=\"${inputs['f09:month']}\">\n          <span class=\"sp-form-date-separator\">/</span>\n
+        \         <input type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f09:day'].name}\"
+        th:value=\"${inputs['f09:day']}\">\n        </div> \n        <div class=\"sp-form-time\">\n
+        \         <input type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f09:hour'].name}\"
+        th:value=\"${inputs['f09:hour']}\">\n          <span class=\"sp-form-date-separator\">:</span>\n
+        \         <input type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f09:minute'].name}\"
+        th:value=\"${inputs['f09:minute']}\">\n          <span class=\"sp-form-date-separator\">:</span>\n
+        \         <input type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f09:second'].name}\"
+        th:value=\"${inputs['f09:second']}\">\n        </div> \n        <div class=\"sp-form-timezone\"
+        th:if=\"${fields['f09'].timeZone == null}\"> \n          <div class=\"sp-form-dropdown\">\n
+        \           <select class=\"sp-form-control\" th:name=\"${fields['f09:tz'].name}\">\n
+        \             <option value=\"\" th:text=\"${fields['f09'].unselectedTimeZoneLabel}\"
+        th:selected=\"${inputs['f09:tz'] == null}\">Select option</option>\n              <option
+        th:each=\"timeZone : ${fields['f09'].timeZones}\" th:value=\"${timeZone.id}\"
+        th:text=\"|(UTC${timeZone.offset}) ${timeZone.id}|\" th:selected=\"${inputs['f09:tz']
+        == timeZone.id}\">Item</option>\n            </select>\n            <span
+        class=\"sp-form-dropdown-icon\"></span>\n          </div> \n        </div>
+        \n      </div> \n      <span class=\"sp-form-noted\" th:if=\"${fields['f09'].help
+        != null}\" th:text=\"${fields['f09'].help}\">Help text</span>\n      <span
+        class=\"sp-form-error\" th:if=\"${errors['f09'] != null}\" th:text=\"${errors['f09'].message}\">Error
+        message</span>\n    </div> \n  </div> \n  <!--/* date(date) */--> \n  <sp:input-field
+        name=\"f010\"></sp:input-field> \n  <div class=\"sp-form-item sp-form-field\">
+        \n    <div class=\"sp-form-label\"> \n      <th:block th:text=\"${fields['f010'].label}\">\n
+        \       Label\n      </th:block> \n      <span class=\"sp-form-required\"
+        th:if=\"${fields['f010'].required}\" th:text=\"${fields['f010'].requiredIndicator}\">*</span>\n
+        \   </div> \n    <div class=\"sp-form-data\"> \n      <div class=\"sp-form-datetimes\">
+        \n        <div class=\"sp-form-date\">\n          <input type=\"number\" class=\"sp-form-control\"
+        th:name=\"${fields['f010:year'].name}\" th:value=\"${inputs['f010:year']}\">\n
+        \         <span class=\"sp-form-date-separator\">/</span>\n          <input
+        type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f010:month'].name}\"
+        th:value=\"${inputs['f010:month']}\">\n          <span class=\"sp-form-date-separator\">/</span>\n
+        \         <input type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f010:day'].name}\"
+        th:value=\"${inputs['f010:day']}\">\n        </div> \n      </div> \n      <span
+        class=\"sp-form-noted\" th:if=\"${fields['f010'].help != null}\" th:text=\"${fields['f010'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f010']
+        != null}\" th:text=\"${errors['f010'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <!--/* monthday(monthday) */--> \n  <sp:input-field name=\"f011\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f011'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f011'].required}\"
+        th:text=\"${fields['f011'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\"> \n      <div class=\"sp-form-datetimes\"> \n        <div
+        class=\"sp-form-date\">\n          <input type=\"number\" class=\"sp-form-control\"
+        th:name=\"${fields['f011:month'].name}\" th:value=\"${inputs['f011:month']}\">\n
+        \         <span class=\"sp-form-date-separator\">/</span>\n          <input
+        type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f011:day'].name}\"
+        th:value=\"${inputs['f011:day']}\">\n        </div> \n      </div> \n      <span
+        class=\"sp-form-noted\" th:if=\"${fields['f011'].help != null}\" th:text=\"${fields['f011'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f011']
+        != null}\" th:text=\"${errors['f011'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <!--/* time(time) */--> \n  <sp:input-field name=\"f012\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f012'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f012'].required}\"
+        th:text=\"${fields['f012'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\"> \n      <div class=\"sp-form-datetimes\"> \n        <div
+        class=\"sp-form-time\">\n          <input type=\"number\" class=\"sp-form-control\"
+        th:name=\"${fields['f012:hour'].name}\" th:value=\"${inputs['f012:hour']}\">\n
+        \         <span class=\"sp-form-date-separator\">:</span>\n          <input
+        type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f012:minute'].name}\"
+        th:value=\"${inputs['f012:minute']}\">\n          <span class=\"sp-form-date-separator\">:</span>\n
+        \         <input type=\"number\" class=\"sp-form-control\" th:name=\"${fields['f012:second'].name}\"
+        th:value=\"${inputs['f012:second']}\">\n        </div> \n      </div> \n      <span
+        class=\"sp-form-noted\" th:if=\"${fields['f012'].help != null}\" th:text=\"${fields['f012'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f012']
+        != null}\" th:text=\"${errors['f012'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <!--/* file(file) */--> \n  <sp:input-field name=\"f013\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f013'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f013'].required}\"
+        th:text=\"${fields['f013'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\"> \n      <div name=\"fileInfoWrapf013\"></div> \n      <span
+        class=\"sp-form-noted\" th:if=\"${fields['f013'].help != null}\" th:text=\"${fields['f013'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f013']
+        != null}\" th:text=\"${errors['f013'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <!--/* password(password) */--> \n  <sp:input-field name=\"f014\"></sp:input-field>
+        \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\">
+        \n      <th:block th:text=\"${fields['f014'].label}\">\n        Label\n      </th:block>
+        \n      <span class=\"sp-form-required\" th:if=\"${fields['f014'].required}\"
+        th:text=\"${fields['f014'].requiredIndicator}\">*</span>\n    </div> \n    <div
+        class=\"sp-form-data\">\n      <input type=\"password\" class=\"sp-form-control\"
+        th:name=\"${fields['f014'].name}\" th:value=\"${inputs['f014']}\"> \n      <div
+        th:if=\"${fields['f014'].collation}\">\n        <span class=\"sp-form-password-reenter\"
+        th:text=\"${fields['f014'].reenterLabel}\">Re-enter to confirm</span>\n        <input
+        type=\"password\" class=\"sp-form-control\" th:name=\"${fields['f014:reenter'].name}\"
+        th:value=\"${inputs['f014:reenter']}\">\n      </div> \n      <span class=\"sp-form-noted\"
+        th:if=\"${fields['f014'].help != null}\" th:text=\"${fields['f014'].help}\">Help
+        text</span>\n      <span class=\"sp-form-error\" th:if=\"${errors['f014']
+        != null}\" th:text=\"${errors['f014'].message}\">Error message</span>\n    </div>
+        \n  </div> \n  <div class=\"sp-form-item sp-form-interaction\">\n    <button
+        class=\"sp-form-prev-button\" type=\"submit\" name=\"action\" value=\"previous\"
+        th:if=\"!${step.isFirst}\" th:text=\"${step.prevButtonLabel}\">Prev</button>\n
+        \   <button class=\"sp-form-next-button\" type=\"submit\" name=\"action\"
+        value=\"next\" th:text=\"${step.nextButtonLabel}\">Next</button>\n  </div>
+        \n</div>"
+    - stepName: s02
+      content: "<div class=\"sp-form-container\"> \n  <div class=\"sp-form-item sp-form-html\"
+        th:inline=\"none\"><p><span style=\"font-size: 18pt;\">Insert_Form_Source_Setting</span></p></div>
+        \n  <!--/* text(text) */--> \n  <div class=\"sp-form-item sp-form-field\">
+        \n    <div class=\"sp-form-label\" th:text=\"${fields['f01'].label}\">\n      Label\n
+        \   </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f01']}\">Example</span>\n    </div> \n  </div> \n  <!--/*
+        textarea(textarea) */--> \n  <div class=\"sp-form-item sp-form-field\"> \n
+        \   <div class=\"sp-form-label\" th:text=\"${fields['f02'].label}\">\n      Label\n
+        \   </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\">
+        \n        <th:block th:each=\"str, stat : ${values['f02']?.lines}\"> \n          <th:block
+        th:text=\"${str}\"></th:block> \n          <br th:unless=\"${stat.last}\">\n
+        \       </th:block> \n      </span>\n    </div> \n  </div> \n  <!--/* email(email)
+        */--> \n  <div class=\"sp-form-item sp-form-field\"> \n    <div class=\"sp-form-label\"
+        th:text=\"${fields['f03'].label}\">\n      Label\n    </div> \n    <div class=\"sp-form-data\">\n
+        \     <span class=\"sp-form-embedded\" th:text=\"${values['f03']}\">spiral@example.com</span>\n
+        \   </div> \n  </div> \n  <!--/* select(select) */--> \n  <div class=\"sp-form-item
+        sp-form-field\"> \n    <div class=\"sp-form-label\" th:text=\"${fields['f04'].label}\">\n
+        \     Label\n    </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f04']?.label}\">Item</span>\n    </div> \n  </div> \n
+        \ <!--/* multiselect(multiselect) */--> \n  <div class=\"sp-form-item sp-form-field\">
+        \n    <div class=\"sp-form-label\" th:text=\"${fields['f05'].label}\">\n      Label\n
+        \   </div> \n    <div class=\"sp-form-data\"> \n      <div class=\"sp-form-selection-vertical\">\n
+        \       <span class=\"sp-form-embedded\" th:each=\"inputValue : ${values['f05']}\"
+        th:text=\"${inputValue.label}\">Item</span>\n      </div> \n    </div> \n
+        \ </div> \n  <!--/* integer(integer) */--> \n  <div class=\"sp-form-item sp-form-field\">
+        \n    <div class=\"sp-form-label\" th:text=\"${fields['f06'].label}\">\n      Label\n
+        \   </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f06']}\">12345</span>\n    </div> \n  </div> \n  <!--/*
+        double(double) */--> \n  <div class=\"sp-form-item sp-form-field\"> \n    <div
+        class=\"sp-form-label\" th:text=\"${fields['f07'].label}\">\n      Label\n
+        \   </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f07']}\">3.1415</span>\n    </div> \n  </div> \n  <!--/*
+        phone(phone) */--> \n  <div class=\"sp-form-item sp-form-field\"> \n    <div
+        class=\"sp-form-label\" th:text=\"${fields['f08'].label}\">\n      Label\n
+        \   </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f08']?.nationalNumber}\">+81 03-1234-5678</span>\n    </div>
+        \n  </div> \n  <!--/* datetime(datetime) */--> \n  <div class=\"sp-form-item
+        sp-form-field\"> \n    <div class=\"sp-form-label\" th:text=\"${fields['f09'].label}\">\n
+        \     Label\n    </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f09']?.format('uuuu/MM/dd HH:mm:ss')}\">2000/01/01 12:00:00</span>\n
+        \   </div> \n  </div> \n  <!--/* date(date) */--> \n  <div class=\"sp-form-item
+        sp-form-field\"> \n    <div class=\"sp-form-label\" th:text=\"${fields['f010'].label}\">\n
+        \     Label\n    </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f010']?.format('uuuu/MM/dd')}\">2000/01/01</span>\n    </div>
+        \n  </div> \n  <!--/* monthday(monthday) */--> \n  <div class=\"sp-form-item
+        sp-form-field\"> \n    <div class=\"sp-form-label\" th:text=\"${fields['f011'].label}\">\n
+        \     Label\n    </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f011']?.format('MM/dd')}\">01/01</span>\n    </div> \n
+        \ </div> \n  <!--/* time(time) */--> \n  <div class=\"sp-form-item sp-form-field\">
+        \n    <div class=\"sp-form-label\" th:text=\"${fields['f012'].label}\">\n
+        \     Label\n    </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f012']?.format('HH:mm:ss')}\">12:00:00</span>\n    </div>
+        \n  </div> \n  <!--/* file(file) */--> \n  <div class=\"sp-form-item sp-form-field\">
+        \n    <div class=\"sp-form-label\" th:text=\"${fields['f013'].label}\">\n
+        \     Label\n    </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        name=\"file-field-f013\" th:text=\"${values['f013']}\">Example</span>\n    </div>
+        \n  </div> \n  <!--/* password(password) */--> \n  <div class=\"sp-form-item
+        sp-form-field\"> \n    <div class=\"sp-form-label\" th:text=\"${fields['f014'].label}\">\n
+        \     Label\n    </div> \n    <div class=\"sp-form-data\">\n      <span class=\"sp-form-embedded\"
+        th:text=\"${values['f014']?.mask()}\">********</span>\n    </div> \n  </div>
+        \n  <div class=\"sp-form-item sp-form-interaction\">\n    <button class=\"sp-form-prev-button\"
+        type=\"submit\" name=\"action\" value=\"previous\" th:if=\"!${step.isFirst}\"
+        th:text=\"${step.prevButtonLabel}\">Prev</button>\n    <button class=\"sp-form-next-button\"
+        type=\"submit\" name=\"action\" value=\"next\" th:text=\"${step.nextButtonLabel}\">Next</button>\n
+        \ </div> \n</div>"
+    completion:
+      content: "<div class=\"sp-form-container\"> \n  <div class=\"sp-form-item sp-form-html\"
+        th:inline=\"none\"><p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p
+        style=\"text-align: center;\">ご登録ありがとうございました。</p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p></div>
+        \n</div>"
+    outOfPeriod:
+      content: "<div class=\"sp-form-container\"> \n  <div class=\"sp-form-item sp-form-html\"
+        th:inline=\"none\"><p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p
+        style=\"text-align: center;\">現在、登録を受け付けていません。</p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p></div>
+        \n</div>"
+    error:
+      content: "<div class=\"sp-form-container\"> \n  <div class=\"sp-form-item sp-form-html\"
+        th:inline=\"none\"><p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p
+        style=\"text-align: center;\">エラーが発生しました。</p>\n<p><br></p>\n<p style=\"text-align:
+        center;\">ブラウザを閉じ、再度アクセスしてください。</p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p></div>
+        \n</div>"
+  style:
+    content: |
+      .sp-form-container {
+        word-break:break-all;
+        font-size:16px;
+        padding:1em;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        width:100.0%;
+        color:#333333;
+        background-color:#ffffff;
+        border:1.0px solid #dddddd;
+        border-radius:0.25rem;
+        margin:0 auto;
+      }
+
+      .sp-form-container .sp-form-item:not(:last-child) {
+        margin-bottom:0.5em;
+        padding-bottom:0.5em;
+      }
+
+      .sp-form-field,
+      .sp-form-group {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient:vertical;
+        -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+        flex-direction:column;
+        border-bottom:1.0px solid #dddddd;
+      }
+
+      .sp-form-field>.sp-form-label,
+      .sp-form-group>.sp-form-label {
+        font-size:1.15em;
+        font-weight:bold;
+        padding:.25em .5em;
+        word-break:break-all;
+        box-sizing:border-box;
+        color:#333333;
+      }
+
+      .sp-form-group-item>.sp-form-label {
+        word-break:break-all;
+        display:inline-block;
+        margin-bottom:.2em;
+      }
+
+      .sp-form-field>.sp-form-data,
+      .sp-form-group>.sp-form-data {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient:vertical;
+        -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+        flex-direction:column;
+        word-break:break-all;
+        padding:1em;
+        box-sizing:border-box;
+      }
+
+      .sp-form-group-item>.sp-form-data {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient:vertical;
+        -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+        flex-direction:column;
+      }
+
+      .sp-form-required {
+        display:inline-block;
+        margin:0 .5em;
+        line-height:1;
+        border-radius:.25em;
+        font-size:.8em;
+        color:#cc0000;
+        padding:0;
+      }
+
+      .sp-form-group-item:not(:last-child) { margin-bottom:.5em; }
+
+      .sp-form-noted {
+        font-size:.8em;
+        color:#808080;
+        word-break:break-all;
+        margin-top:.5em;
+      }
+
+      .sp-form-error {
+        font-size:.8em;
+        color:#cc0000;
+      }
+
+      .sp-form-control {
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        -ms-progress-appearance:none;
+        appearance:none;
+        font-family:inherit;
+        font-size:1em;
+        line-height:1.5;
+        padding:.3em .7em;
+        color:#333333;
+        box-sizing:border-box;
+        width:100%;
+        margin-bottom:.2em;
+        border:1px solid #dddddd;
+        border-radius:0.25rem;
+      }
+
+      .sp-form-control:placeholder-shown { color:#aaa; }
+
+      .sp-form-control::placeholder { color:#aaa; }
+
+      .sp-form-control::-ms-input-placeholder { color:#aaa; }
+
+      .sp-form-control:-ms-input-placeholder { color:#aaa; }
+
+      .sp-form-control:-moz-placeholder { color:#aaa; }
+
+      textarea.sp-form-control { resize:vertical; }
+
+      select.sp-form-control,
+      option.sp-form-control {
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        -ms-progress-appearance:none;
+        appearance:none;
+        padding-right:1.5em;
+      }
+
+      select.sp-form-control::-ms-expand { display:none; }
+
+      .sp-form-phone .sp-form-control { max-width:20em; }
+
+      .sp-form-phone>*:not(:only-child) { margin-right:.5rem; }
+
+      .sp-form-dropdown { position:relative; }
+
+      .sp-form-dropdown-icon {
+        display:block;
+        position:absolute;
+        top:1em;
+        right:.5em;
+        line-height:0;
+        pointer-events:none;
+      }
+
+      .sp-form-dropdown-icon:after {
+        content:"";
+        display:block;
+        border-top:0.333em solid #888;
+        border-right:.333em solid transparent;
+        border-left:.333em solid transparent;
+      }
+
+      .sp-form-selection {
+        display:block;
+        margin:.25em 0;
+        padding:.5em .8em .5em 0;
+        border-radius:0.25rem;
+      }
+
+      .sp-form-selection-label { vertical-align:middle; }
+
+      .sp-form-datetimes,
+      .sp-form-date,
+      .sp-form-single-date,
+      .sp-form-time,
+      .sp-form-single-time,
+      .sp-form-timezone {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient:horizontal;
+        -webkit-box-direction:normal;
+        -ms-flex-flow:row wrap;
+        flex-flow:row wrap;
+        -webkit-box-align:center;
+        -ms-flex-align:center;
+        align-items:center;
+      }
+
+      .sp-form-datetime,
+      .sp-form-date,
+      .sp-form-single-date,
+      .sp-form-time,
+      .sp-form-single-time,
+      .sp-form-timezone {
+        margin-right:.5rem;
+        -ms-flex-wrap:nowrap;
+        flex-wrap:nowrap;
+      }
+
+      .sp-form-datetime { max-width:20em; }
+
+      .sp-form-phone {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient:horizontal;
+        -webkit-box-direction:normal;
+        -ms-flex-flow:row wrap;
+        flex-flow:row wrap;
+        -webkit-box-align:center;
+        -ms-flex-align:center;
+        align-items:center;
+      }
+
+      .sp-form-date-separator {
+        width:1em;
+        text-align:center;
+        -ms-flex-negative:1;
+        flex-shrink:0;
+      }
+
+      .sp-form-number { max-width:20em; }
+
+      .sp-form-email-reenter {
+        font-size:.9em;
+        margin-bottom:.2em;
+      }
+
+      .sp-form-html p { margin:0; }
+
+      .sp-form-interaction {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+        margin-top:1em;
+      }
+
+      .sp-form-prev-button {
+        color:#333333;
+        background-color:#ffffff;
+        border:1.0px solid #333333;
+        border-radius:0.25rem;
+      }
+
+      .sp-form-next-button {
+        color:#ffffff;
+        background-color:#333333;
+        border:none;
+        border-radius:0.25rem;
+      }
+
+      .sp-form-field .sp-form-embedded { padding-left:.25em; }
+
+      .sp-form-selection>input[type="radio"],
+      .sp-form-selection>input[type="checkbox"] {
+        vertical-align:middle;
+        margin-left:0;
+      }
+
+      .sp-form-selection>input[type="radio"] { margin-top:0; }
+
+      .sp-form-date>input,
+      .sp-form-time>input { max-width:7em; }
+
+      .sp-form-single-date>input,
+      .sp-form-single-time>input { max-width:20em; }
+
+      .sp-form-interaction>button {
+        -webkit-box-flex:1;
+        -ms-flex-positive:1;
+        flex-grow:1;
+        cursor:pointer;
+        font-size:1em;
+        line-height:1.5;
+        margin:.5rem;
+        padding:.375rem 0;
+        text-align:center;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        white-space:nowrap;
+      }
+
+      @media (min-width:768px) {
+        .sp-form-container {
+          font-size:initial;
+          padding:3em;
+        }
+
+        .sp-form-field,
+        .sp-form-group {
+          -webkit-box-orient:horizontal;
+          -webkit-box-direction:normal;
+          -ms-flex-flow:row nowrap;
+          flex-flow:row nowrap;
+        }
+
+        .sp-form-field>.sp-form-label,
+        .sp-form-group>.sp-form-label {
+          font-size:1em;
+          width:30%;
+          padding:1em;
+        }
+
+        .sp-form-group .sp-form-group-item>.sp-form-label {
+          font-size:.9em;
+          padding-right:.5em;
+        }
+
+        .sp-form-field>.sp-form-data,
+        .sp-form-group>.sp-form-data {
+          font-size:1em;
+          width:70%;
+        }
+
+        .sp-form-group>.sp-form-data {
+          -webkit-box-orient:horizontal;
+          -webkit-box-direction:normal;
+          -ms-flex-flow:row wrap;
+          flex-flow:row wrap;
+        }
+
+        .sp-form-group.sp-form-group-vertical>.sp-form-data {
+          -webkit-box-orient:vertical;
+          -webkit-box-direction:normal;
+          -ms-flex-direction:column;
+          flex-direction:column;
+        }
+
+        .sp-form-group-item { padding:.25em; }
+
+        .sp-form-group-item:not(:last-child) { margin-bottom:0; }
+
+        .sp-form-control { font-size:.9em; }
+
+        .sp-form-selection {
+          font-size:.9em;
+          margin:0 1em 0 0;
+          padding:0;
+        }
+
+        .sp-form-selection-vertical {
+          display:-webkit-box;
+          display:-ms-flexbox;
+          display:flex;
+          -webkit-box-orient:vertical;
+          -webkit-box-direction:normal;
+          -ms-flex-direction:column;
+          flex-direction:column;
+        }
+
+        .sp-form-selection-horizontal {
+          display:-webkit-box;
+          display:-ms-flexbox;
+          display:flex;
+          -webkit-box-orient:horizontal;
+          -webkit-box-direction:normal;
+          -ms-flex-flow:row wrap;
+          flex-flow:row wrap;
+        }
+
+        .sp-form-interaction {
+          justify-content:center;
+          margin-top:2em;
+        }
+
+        .sp-form-embedded { font-size:.9em; }
+
+        .sp-form-group-item .sp-form-embedded { padding-right:5em; }
+
+        .sp-form-interaction>button {
+          -webkit-box-flex:0;
+          -ms-flex-positive:0;
+          flex-grow:0;
+          padding:.375rem 5em;
+        }
+      }
+
+      .sp-form-recaptcha {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-pack:start;
+        -ms-flex-pack:start;
+        justify-content:flex-start;
+      }
+
+      .sp-form-recaptcha-right {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-pack:end;
+        -ms-flex-pack:end;
+        justify-content:flex-end;
+      }
+
+      .sp-form-recaptcha-center {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-pack:center;
+        -ms-flex-pack:center;
+        justify-content:center;
+      }
+
+      .sp-form-file-button {
+        padding:4.875px 9.75px;
+        font-size:80%;
+        cursor:pointer;
+        color:#000000;
+        background-color:#cecece;
+        border:none;
+        border-radius:0.25rem;
+      }
+
+      .sp-form-file-button:focus { outline:0; }
+
+      .sp-from-file-default-drag-drop-area {
+        color:#333333;
+        background-color:#f8f8f8;
+        border:1.0px dashed #6c757d;
+        border-radius:0;
+        width:100%;
+        height:200px;
+        text-align:center;
+      }
+
+      .sp-from-file-ondraghover-drag-drop-area {
+        color:#333333;
+        background-color:#efefef;
+        border:1.0px dashed #6c757d;
+        border-radius:0;
+        width:100%;
+        height:200px;
+        text-align:center;
+      }
+
+      .sp-from-file-ondragleave-drag-drop-area {
+        color:#333333;
+        background-color:#f8f8f8;
+        border:1.0px dashed #6c757d;
+        border-radius:0;
+        width:100%;
+        height:200px;
+      }
+
+      .sp-from-file-ondrop-drag-drop-area {
+        color:#333333;
+        background-color:#f8f8f8;
+        border:1.0px dashed #6c757d;
+        border-radius:0;
+        width:100%;
+        height:200px;
+      }
+
+      .sp-form-embedded>.sp-file-info:last-child { padding-bottom:0; }
+
+      .sp-file-info {
+        padding-top:1em;
+        padding-bottom:1em;
+        line-height:1.5;
+      }
+
+      .sp-file-info>div { width:100%; }
+  script:
+    content: ''
+  design: source

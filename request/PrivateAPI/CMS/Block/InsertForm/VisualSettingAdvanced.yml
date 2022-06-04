@@ -1,0 +1,512 @@
+---
+creationType: advanced
+dbId:
+name: VirtualSettingAdvanced
+displayName: VirtualSettingAdvanced
+description: VirtualSettingAdvanced
+defaultMessageId: "-2"
+preference:
+  requiredIndicator:
+  reenterLabel:
+  unselectedLabel:
+  requiredErrorMessage:
+  duplicateErrorMessage:
+  reenterErrorMessage:
+  passwordFormatErrorMessage:
+  recaptchaErrorMessage:
+  otherErrorsMessage:
+  prevButtonLabel:
+  nextButtonLabel:
+  submitButtonLabel:
+  fileFormPreference:
+fields:
+- name: f01
+  dbFieldId: '1'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: text
+  restriction:
+    required:
+  operation: input
+- name: f02
+  dbFieldId: '2'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: textarea
+  restriction:
+    required:
+  operation: input
+- name: f03
+  dbFieldId: '3'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    reenterLabel:
+    attributeName: email
+  restriction:
+    required:
+    collation: true
+  operation: input
+- name: f04
+  dbFieldId: '4'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    unselectedLabel:
+    options: []
+    attributeName: select
+  restriction:
+    required:
+  operation: input
+- name: f05
+  dbFieldId: '5'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    options: []
+    attributeName: multiselect
+  restriction:
+    required:
+  operation: input
+- name: f06
+  dbFieldId: '6'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: integer
+  restriction:
+    required:
+    min:
+    max:
+  operation: input
+- name: f07
+  dbFieldId: '7'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: double
+  restriction:
+    required:
+    min:
+    max:
+  operation: input
+- name: f08
+  dbFieldId: '8'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: phone
+  restriction:
+    required:
+  operation: input
+- name: f09
+  dbFieldId: '9'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    datePlaceholder:
+    timePlaceholder:
+    yearPlaceholder:
+    monthPlaceholder:
+    dayPlaceholder:
+    hourPlaceholder:
+    minutePlaceholder:
+    secondPlaceholder:
+    attributeName: datetime
+  restriction:
+    required:
+    min:
+    max:
+    timeZone: Asia/Tokyo
+  operation: input
+- name: f010
+  dbFieldId: '10'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    yearPlaceholder:
+    monthPlaceholder:
+    dayPlaceholder:
+    attributeName: date
+  restriction:
+    required:
+    min:
+    max:
+  operation: input
+- name: f011
+  dbFieldId: '11'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    monthPlaceholder:
+    dayPlaceholder:
+    attributeName: monthday
+  restriction:
+    required:
+    min:
+    max:
+  operation: input
+- name: f012
+  dbFieldId: '12'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    hourPlaceholder:
+    minutePlaceholder:
+    secondPlaceholder:
+    attributeName: time
+  restriction:
+    required:
+    min:
+    max:
+  operation: input
+- name: f013
+  dbFieldId: '13'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    attributeName: file
+  restriction:
+    required:
+  operation: input
+- name: f014
+  dbFieldId: '14'
+  preference:
+    label:
+    helpText:
+    otherErrorsMessage:
+    placeholder:
+    reenterLabel:
+    attributeName: password
+  restriction:
+    required:
+    collation: true
+  operation: input
+steps:
+- name: s01
+  displayName: Step1
+  type: input
+- name: s02
+  displayName: Step2
+  references:
+  - s01
+  type: confirmation
+onCompletion:
+  handlers: []
+  behavior: display
+restriction:
+  period:
+    startAt:
+    endAt:
+    timeZone: Asia/Tokyo
+  registerLimit:
+    settingValue:
+view:
+  template:
+    steps:
+    - stepName: s01
+      parts:
+      - type: stepFlow
+      - content: '<p><span style="font-size: 18pt;">Visual Setting</span></p>'
+        type: html
+      - fieldName: f01
+        control:
+          prefix:
+          suffix:
+          type: text
+        type: input
+      - fieldName: f02
+        control:
+          prefix:
+          suffix:
+          type: text
+        type: input
+      - fieldName: f03
+        control:
+          prefix:
+          suffix:
+          type: text
+        type: input
+      - fieldName: f04
+        control:
+          direction: column
+          type: radioButton
+        type: input
+      - fieldName: f05
+        control:
+          direction: column
+          type: checkBox
+        type: input
+      - fieldName: f06
+        control:
+          prefix:
+          suffix:
+          type: text
+        type: input
+      - fieldName: f07
+        control:
+          prefix:
+          suffix:
+          type: text
+        type: input
+      - fieldName: f08
+        control:
+          prefix:
+          suffix:
+          type: text
+        type: input
+      - fieldName: f09
+        control:
+          prefix:
+          ymInfix: "/"
+          mdInfix: "/"
+          dhInfix: " "
+          hmInfix: ":"
+          msInfix: ":"
+          suffix:
+          type: ymdhmsText
+        type: input
+      - fieldName: f010
+        control:
+          prefix:
+          ymInfix: "/"
+          mdInfix: "/"
+          suffix:
+          type: ymdText
+        type: input
+      - fieldName: f011
+        control:
+          prefix:
+          infix: "/"
+          suffix:
+          type: mdText
+        type: input
+      - fieldName: f012
+        control:
+          prefix:
+          hmInfix: ":"
+          msInfix: ":"
+          suffix:
+          type: hmsText
+        type: input
+      - fieldName: f013
+        control:
+          prefix:
+          suffix:
+          type: text
+        type: input
+      - fieldName: f014
+        control:
+          prefix:
+          suffix:
+          type: text
+        type: input
+      - prevLabel:
+        nextLabel:
+        type: button
+    - stepName: s02
+      parts:
+      - type: stepFlow
+      - content: '<p><span style="font-size: 18pt;">Visual Setting</span></p>'
+        type: html
+      - fieldName: f01
+        format:
+          type: standard
+        hidden: false
+        type: display
+      - fieldName: f02
+        format:
+          type: standard
+        hidden: false
+        type: display
+      - fieldName: f03
+        format:
+          type: standard
+        hidden: false
+        type: display
+      - fieldName: f04
+        format:
+          direction: column
+          type: optionLabel
+        hidden: false
+        type: display
+      - fieldName: f05
+        format:
+          direction: column
+          type: optionLabel
+        hidden: false
+        type: display
+      - fieldName: f06
+        format:
+          type: standard
+        hidden: false
+        type: display
+      - fieldName: f07
+        format:
+          type: standard
+        hidden: false
+        type: display
+      - fieldName: f08
+        format:
+          type: standard
+        hidden: false
+        type: display
+      - fieldName: f09
+        format:
+          prefix:
+          ymInfix: "/"
+          mdInfix: "/"
+          dhInfix: " "
+          hmInfix: ":"
+          msInfix: ":"
+          suffix:
+          type: ymdhms
+        hidden: false
+        type: display
+      - fieldName: f010
+        format:
+          prefix:
+          ymInfix: "/"
+          mdInfix: "/"
+          suffix:
+          type: ymd
+        hidden: false
+        type: display
+      - fieldName: f011
+        format:
+          prefix:
+          infix: "/"
+          suffix:
+          type: md
+        hidden: false
+        type: display
+      - fieldName: f012
+        format:
+          prefix:
+          hmInfix: ":"
+          msInfix: ":"
+          suffix:
+          type: hms
+        hidden: false
+        type: display
+      - fieldName: f013
+        format:
+          type: standard
+        hidden: false
+        type: display
+      - fieldName: f014
+        format:
+          type: standard
+        hidden: false
+        type: display
+      - prevLabel:
+        nextLabel:
+        type: button
+    completion:
+      parts:
+      - type: stepFlow
+      - content: |-
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p style="text-align: center;">ご登録ありがとうございました。</p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+        type: html
+    outOfPeriod:
+      parts:
+      - content: |-
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p style="text-align: center;">現在、登録を受け付けていません。</p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+        type: html
+    error:
+      parts:
+      - content: |-
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p style="text-align: center;">エラーが発生しました。</p>
+          <p><br></p>
+          <p style="text-align: center;">ブラウザを閉じ、再度アクセスしてください。</p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+          <p><br></p>
+        type: html
+  style:
+    rule:
+      labelArea:
+        textColor: "#333333"
+        backgroundColor:
+      nextButton:
+        backgroundColor: "#333333"
+        textColor: "#ffffff"
+      theme: simple
+    type: simple
+  script:
+    content: ''
+  stepFlow:
+    stepLabels:
+    - stepName: s01
+      label:
+    - stepName: s02
+      label:
+    includeCompleteStep: true
+    completeStepLabel:
+    largeScreenSetting:
+      arrowStyle: normal
+      type: arrow
+    smallScreenSetting:
+      arrowStyle: normal
+      type: arrow
+    enabled: true
+  design: visual

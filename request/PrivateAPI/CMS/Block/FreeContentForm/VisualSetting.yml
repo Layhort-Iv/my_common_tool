@@ -1,0 +1,7 @@
+---
+creationType: simple
+name: VisualSetting
+displayName: Free Content - Visual Setting
+description: Free Content - Visual Setting
+view:
+  design: visual

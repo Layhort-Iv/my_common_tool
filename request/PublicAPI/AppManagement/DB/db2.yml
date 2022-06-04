@@ -1,0 +1,165 @@
+---
+name: DB2
+displayName: DB2
+fields:
+- name: text
+  displayName: text
+  type: text
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  minLength:
+  maxLength:
+  allowCharTypes:
+  - "*"
+  regexp:
+- name: textarea
+  displayName: textarea
+  type: textarea
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  minLength:
+  maxLength:
+  allowCharTypes:
+  - "*"
+  regexp:
+- name: email
+  displayName: email
+  type: email
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  allowDomains:
+  denyDomains:
+  regexp:
+- name: select
+  displayName: select
+  type: select
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  options:
+  - id: '1'
+    label: Test1
+  - id: '2'
+    label: Test2
+  - id: '3'
+    label: Test3
+- name: multiselect
+  displayName: multiselect
+  type: multiselect
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  options:
+  - id: '1'
+    label: Mutli Test 1
+  - id: '2'
+    label: Mutli Test 2
+  - id: '3'
+    label: Mutli Test 3
+  minSelection:
+  maxSelection:
+- name: integer
+  displayName: integer
+  type: integer
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  minRange:
+  maxRange:
+- name: double
+  displayName: double
+  type: double
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  minRange:
+  maxRange:
+  decimalDigit:
+    enableRoundDown: true
+    digitNumber:
+- name: phone
+  displayName: phone
+  type: phone
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  phoneRegionCode:
+- name: datetime
+  displayName: datetime
+  type: dateTime
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  minRange:
+  maxRange:
+- name: date
+  displayName: date
+  type: date
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  minRange:
+  maxRange:
+- name: monthday
+  displayName: monthday
+  type: monthDay
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  minRange:
+  maxRange:
+- name: time
+  displayName: time
+  type: time
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  minRange:
+  maxRange:
+- name: file
+  displayName: file
+  type: file
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  allowFileExtensions: []
+  allowFileExtensionCategories:
+  - document
+  - text
+  - image
+  - audio
+  - video
+  maxFiles: '10'
+  maxFileSize: 104857600
+- name: password
+  displayName: password
+  type: password
+  defaultValue:
+  required: false
+  unique: false
+  index: false
+  maxLength: 64
+  minLength: 8
+  allowCharTypes:
+  - numeral
+  - sign
+  - lowercase_alphabet
+  - uppercase_alphabet
+  minCharTypes: 4
+description: ''

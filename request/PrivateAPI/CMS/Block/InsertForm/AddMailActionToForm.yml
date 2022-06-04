@@ -1,0 +1,7 @@
+---
+onCompletion:
+  handlers:
+  - type: action
+    ids:
+    - '70436'
+  behavior: display

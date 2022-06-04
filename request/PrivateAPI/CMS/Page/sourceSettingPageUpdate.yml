@@ -1,0 +1,11 @@
+---
+view:
+  design: source
+  layoutId:
+  template:
+    content: <sp:block name="ifb04110"></sp:block>
+    metadata: <title th:text="${page.title}"></title>
+  style:
+    content: ''
+  script:
+    content: ''

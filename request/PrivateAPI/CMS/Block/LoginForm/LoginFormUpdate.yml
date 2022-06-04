@@ -1,0 +1,10 @@
+---
+name: LoginFormUpdate
+displayName: LoginFormUpdate
+description: LoginFormUpdate
+steps:
+- type: input
+  name: idPassword
+  displayName: ID/PASSWORD
+authenticationId:
+revision: 1

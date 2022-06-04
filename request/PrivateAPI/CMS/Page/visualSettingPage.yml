@@ -1,0 +1,14 @@
+---
+displayName: VisualSettingPage
+name: VisualSettingPage
+title: VisualSettingPage
+view:
+  design: visual
+  template:
+    metadata: <title th:text="${page.title}"></title>
+    blockNames: []
+  layoutId:
+  style:
+    content: ''
+  script:
+    content: ''

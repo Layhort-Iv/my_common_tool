@@ -1,0 +1,19 @@
+---
+creationType: simple
+name: FormTargetAuthRecord
+displayName: FormTargetAuthRecord
+description: FormTargetAuthRecord
+dbId:
+idKeyName: recordId
+defaultMessageId: "-2"
+preference:
+fields:
+- name: recordId
+  dbFieldId: _id
+  operation: inheritance
+  from:
+    resourceType: authentication
+    resourceDbFieldId: _id
+authenticationId:
+view:
+  design: source

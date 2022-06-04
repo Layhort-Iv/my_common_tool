@@ -1,0 +1,18 @@
+1. Site
+- Get and update reCAPTCHA
+
+2. Layout
+- Get all layouts in snapshot
+- Get a layout in snapshot
+
+3. Page
+- Create a child page of each setting
+- Preview existing snapshot page
+- Extract blocks
+- Get all snapshot page
+- Get snapshot page 
+- Get all child page in snapshot 
+- Change private/public setting for production pages
+
+4. Insert Form
+- Couldn't replicate form

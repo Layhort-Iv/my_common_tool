@@ -1,0 +1,4 @@
+---
+isAdmin: false
+roles:
+- developer

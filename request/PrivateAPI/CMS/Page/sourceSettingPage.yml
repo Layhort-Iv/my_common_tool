@@ -1,0 +1,14 @@
+---
+displayName: SourceSettingPage
+name: SourceSettingPage
+title: SourceSettingPage
+view:
+  design: source
+  template:
+    metadata: <title th:text="${page.title}"></title>
+    content: "<div>Please write elements after body</div>\n"
+  layoutId:
+  style:
+    content: ''
+  script:
+    content: ''

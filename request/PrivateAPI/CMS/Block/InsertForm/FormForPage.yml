@@ -1,0 +1,57 @@
+---
+creationType: simple
+name: InsertFormSourceSetting
+displayName: Insert Form - Source Setting
+description: Insert Form - Source Setting
+dbId:
+defaultMessageId: "-2"
+preference:
+fields:
+- name: f01
+  dbFieldId: '1'
+- name: f02
+  dbFieldId: '2'
+- name: f03
+  dbFieldId: '3'
+- name: f04
+  dbFieldId: '4'
+- name: f05
+  dbFieldId: '5'
+- name: f06
+  dbFieldId: '6'
+- name: f07
+  dbFieldId: '7'
+- name: f08
+  dbFieldId: '8'
+- name: f09
+  dbFieldId: '9'
+  restriction:
+    timeZone: Asia/Bangkok
+- name: f010
+  dbFieldId: '10'
+- name: f011
+  dbFieldId: '11'
+- name: f012
+  dbFieldId: '12'
+- name: f013
+  dbFieldId: '13'
+- name: f014
+  dbFieldId: '14'
+view:
+  design: source
+  generationSettings:
+  - fieldName: f04
+    control:
+      type: radioButton
+  - fieldName: f09
+    control:
+      type: ymdhmsText
+  - fieldName: f010
+    control:
+      type: ymdText
+  - fieldName: f011
+    control:
+      type: mdText
+  - fieldName: f012
+    control:
+      type: hmsText

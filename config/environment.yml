@@ -1,0 +1,60 @@
+dev:
+  http_host: https://api.dev.spiral-platform.net
+  http_port: 443
+  certificate: null
+  oauth_setting:
+    grant_type: password
+    username: iv.layhort@pi-pe.co.jp
+    password: Layhort1810
+    client_id: hogehoge_41
+    client_secret: fugafuga_41
+    account: 139
+  api_key: null
+  sys_api_key: bff_keyauths_key
+  mailDomainId: '35'
+qa:
+  http_host: https://api.qa.spiral-platform.net
+  http_port: 443
+  mqtt_host: mqtt.spiral.office-devel
+  mqtt_port: 8883
+  certificate: null
+  oauth_setting: 
+    grant_type: password
+    username: iv.layhort@pi-pe.co.jp
+    password: Layhort1810
+    client_id: hogehoge_2175
+    client_secret: fugafuga_2175
+    account: 1463
+  api_key: null
+  sys_api_key: bff_keyauths_key
+  mailDomainId: '209'
+devel:
+  http_host: https://api.devel.spiral-platform.net
+  http_port: 443
+  certificate: null
+  oauth_setting:
+    grant_type: password
+    username: iv.layhort@pi-pe.co.jp
+    password: Layhort1810
+    client_id: hogehoge_28
+    client_secret: fugafuga_28
+    account: 280
+  api_key: null
+  sys_api_key: bff_keyauths_key
+  mailDomainId: '31'
+stg:
+  http_host: https://api.spiral-platform.net
+  http_port: 443
+  mqtt_host: mqtt.spiral-platform.net
+  mqtt_port: 8883
+  certificate: null
+  api_key: null
+  sys_api_key: null
+prod:
+  http_host: https://api.spiral-platform.com
+  http_port: 443
+  mqtt_host: mqtt.spiral-platform.com
+  mqtt_port: 8883
+  certificate: null
+  api_key: null
+  sys_api_key: null

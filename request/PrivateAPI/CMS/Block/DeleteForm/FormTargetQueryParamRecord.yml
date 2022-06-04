@@ -1,0 +1,19 @@
+---
+creationType: simple
+name: FormTargetQueryParamRecord
+displayName: FormTargetQueryParamRecord
+description: FormTargetQueryParamRecord
+dbId:
+idKeyName: recordId
+defaultMessageId: "-2"
+preference:
+fields:
+- name: recordId
+  dbFieldId: _id
+  operation: inheritance
+  from:
+    resourceType: record
+    resourceDbFieldId: _id
+authenticationId:
+view:
+  design: source

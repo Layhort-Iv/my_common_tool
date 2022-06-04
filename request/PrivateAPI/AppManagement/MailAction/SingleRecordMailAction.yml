@@ -1,0 +1,30 @@
+---
+displayName: SingleRecordMailAction
+name: SingleRecordMailAction
+status: setting
+dbId:
+appId: 
+parent: formTrigger
+to:
+  dbInfo:
+    fieldId: '3'
+    simpleWhere:
+      operator: and
+      conditions:
+      - field: "@email"
+        operator: domain_is
+        value1: test-av.smp.ne.jp
+excludeErrorCount: 1
+from:
+  displayName: PBKH QA
+  emailLocalPart: pbkh_qa
+  emailFromDomainId:
+replyTo:
+subject:
+  content: CRUD Mail Action Auto Test
+bodies:
+- contentType: plain
+  content: CRUD Mail Action Auto Test
+  clickLogin: []
+  clickCount:
+contentsTimeZone: Asia/Bangkok

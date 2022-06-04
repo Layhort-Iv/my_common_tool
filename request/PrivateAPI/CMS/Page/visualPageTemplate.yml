@@ -1,0 +1,12 @@
+---
+payload:
+  view:
+    design: visual
+    layoutId:
+    template:
+      blockNames:
+      metadata: <title>Visual Setting Page</title>
+    style:
+      content: ''
+    script:
+      content: ''

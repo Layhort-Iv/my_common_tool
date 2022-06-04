@@ -1,0 +1,8 @@
+---
+creationType: simple
+name: VisualSettingAuthArea
+displayName: Free Content - Visual Setting Auth Area
+description: Free Content - Visual Setting Auth Area
+view:
+  design: visual
+authenticationId:

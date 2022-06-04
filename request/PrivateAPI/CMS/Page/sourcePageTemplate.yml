@@ -1,0 +1,12 @@
+---
+payload:
+  view:
+    design: source
+    layoutId:
+    template:
+      content: "<h1>Hello World</h1>"
+      metadata: <title>Source Setting Page</title>
+    style:
+      content: ''
+    script:
+      content: ''

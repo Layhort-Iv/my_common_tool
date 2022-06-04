@@ -1,0 +1,11 @@
+---
+name: ResetPasswordFormUpdate
+displayName: ResetPasswordFormUpdate
+description: ResetPasswordFormUpdate
+steps:
+- type: input
+  name: request
+  displayName: common.request
+- type: input
+  name: registration
+  displayName: common.reRegist

@@ -1,0 +1,8 @@
+---
+displayName: AuthArea
+name: AuthArea
+dbId:
+fieldId: '3'
+firstMethods:
+- type: password
+  passwordFieldId: '14'

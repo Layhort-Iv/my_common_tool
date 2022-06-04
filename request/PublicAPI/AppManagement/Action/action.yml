@@ -1,0 +1,28 @@
+---
+displayName: Test_Schedule_Trigger_Action
+name: Test_Schedule_Trigger_Action
+status: ready
+dbId: 
+appId:
+to:
+  dbInfo:
+    fieldId: '3'
+    simpleWhere:
+      operator: and
+      conditions:
+      - field: "@email"
+        operator: domain_is
+        value1: test-av.smp.ne.jp
+excludeErrorCount: 1
+from:
+  displayName:
+  emailLocalPart: Test_Schedule_Trigger_Action
+  emailFromDomainId: '201'
+replyTo:
+subject:
+  content: Test_Schedule_Trigger_Action
+bodies:
+- contentType: plain
+  content: Test_Schedule_Trigger_Action
+  clickLogin: []
+contentsTimeZone: Asia/Bangkok

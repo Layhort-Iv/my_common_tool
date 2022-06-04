@@ -1,0 +1,8 @@
+---
+creationType: simple
+name: SourceSettingAuthArea
+displayName: Free Content - Source Setting Auth Area
+description: Free Content - Source Setting Auth Area
+view:
+  design: source
+authenticationId:

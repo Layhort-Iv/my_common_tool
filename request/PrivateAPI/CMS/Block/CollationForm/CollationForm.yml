@@ -1,0 +1,14 @@
+---
+creationType: simple
+name: CollationForm
+dbId:
+fieldId: '3'
+displayName: CollationForm
+description: CollationForm
+defaultMessageId: "-2"
+preference:
+emailSetting:
+  toEmailId: '3'
+  from:
+    emailLocalPart: iv.layhort-1
+    emailDomainId: 

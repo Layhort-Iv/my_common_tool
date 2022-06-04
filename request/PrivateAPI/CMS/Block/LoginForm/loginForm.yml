@@ -1,0 +1,8 @@
+---
+creationType: simple
+name: LoginForm
+displayName: LoginForm
+description: LoginForm
+defaultMessageId: "-2"
+preference:
+authenticationId:

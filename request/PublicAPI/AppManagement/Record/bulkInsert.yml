@@ -1,0 +1,82 @@
+---
+records:
+- text: text
+  textarea: textarea
+  email: email@email.com
+  select: '1'
+  multiselect:
+  - '1'
+  - '2'
+  - '3'
+  integer: '100'
+  double: '100.00'
+  phone: "+855962664291"
+  datetime: '2022-02-23T17:00:00Z'
+  date: '2022-02-24'
+  monthday: 02-24
+  time: '00:00:00'
+  referenceField: '1'
+- text: text
+  textarea: textarea
+  email: email@email.com
+  select: '1'
+  multiselect:
+  - '1'
+  - '2'
+  - '3'
+  integer: '100'
+  double: '100.00'
+  phone: "+855962664291"
+  datetime: '2022-02-23T17:00:00Z'
+  date: '2022-02-24'
+  monthday: 02-24
+  time: '00:00:00'
+  referenceField: '1'
+- text: text
+  textarea: textarea
+  email: email@email.com
+  select: '1'
+  multiselect:
+  - '1'
+  - '2'
+  - '3'
+  integer: '100'
+  double: '100.00'
+  phone: "+855962664291"
+  datetime: '2022-02-23T17:00:00Z'
+  date: '2022-02-24'
+  monthday: 02-24
+  time: '00:00:00'
+  referenceField: '1'
+- text: text
+  textarea: textarea
+  email: email@email.com
+  select: '1'
+  multiselect:
+  - '1'
+  - '2'
+  - '3'
+  integer: '100'
+  double: '100.00'
+  phone: "+855962664291"
+  datetime: '2022-02-23T17:00:00Z'
+  date: '2022-02-24'
+  monthday: 02-24
+  time: '00:00:00'
+  referenceField: '1'
+- text: text
+  textarea: textarea
+  email: email@email.com
+  select: '1'
+  multiselect:
+  - '1'
+  - '2'
+  - '3'
+  integer: '100'
+  double: '100.00'
+  phone: "+855962664291"
+  datetime: '2022-02-23T17:00:00Z'
+  date: '2022-02-24'
+  monthday: 02-24
+  time: '00:00:00'
+  referenceField: '1'
