@@ -4,7 +4,7 @@
   + requests
   + pyyaml
 
-1. Create a python virtual environment and activate
+1. Create a python virtual environment and activates
 
    ```
    pip install virtualenv  
