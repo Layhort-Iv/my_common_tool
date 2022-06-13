@@ -138,7 +138,7 @@ class EndUserRegistrationForm(Thread, testDecorator, AppFunction, DBFunction, Si
             log_print(self.SCENARIO_NAME, "Successfully activate single record mail action")
 
 
-            log_print(self.SCENARIO_NAME, "Hello this is new change")
+            log_print(self.SCENARIO_NAME, "Hello this is new change ")
 
 
 
